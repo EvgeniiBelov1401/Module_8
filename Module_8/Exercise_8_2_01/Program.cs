@@ -2,11 +2,11 @@
 {
     internal class Program
     {
-        private static object direct;
+       
 
         static void Main(string[] args)
         {
-            string dirName = "D:\\";
+            string dirName = @"D:\";
             if (Directory.Exists(dirName))
             {
                 string[] direct = Directory.GetDirectories(dirName);
@@ -16,7 +16,7 @@
                     $"Кол-во файлов: {files.Length}\n");
             }
 
-            string newDirName = "D:\\NewFolder";
+            string newDirName = @"D:\NewFolder";
             if (!Directory.Exists(newDirName))
             {
                 Directory.CreateDirectory(newDirName);
@@ -27,7 +27,7 @@
                     $"Кол-во файлов: {files.Length}\n");
             }
 
-            string newDirNameForDelete = "D:\\NewFolder";
+            string newDirNameForDelete = @"D:\NewFolder";
             if (Directory.Exists(newDirNameForDelete))
             {
                 Directory.Delete(newDirNameForDelete);
