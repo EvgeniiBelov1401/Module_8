@@ -10,8 +10,6 @@
             Console.WriteLine("Для создания бинарного файла нажмите 'Enter'");
             Console.ReadLine();
             CreateBinaryFile(filePath,StringValue);
-            Console.Clear();
-            Console.WriteLine("Бинарный файл был создан");
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Для просмотра содержимого бинарного файла нажмите 'Enter'");
@@ -29,6 +27,13 @@
                 {
                     create.Write(StringValue);
                 }
+                Console.Clear();
+                Console.WriteLine("Бинарный файл был создан");
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Файл уже существует");
             }
         }
         static void ReadBinaryFile(string filePath)
